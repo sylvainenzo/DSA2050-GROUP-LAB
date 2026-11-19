@@ -1,0 +1,11 @@
+{
+  "selected_model": "Logistic regression",
+  "best_params": {
+    "model__C": 1
+  },
+  "primary_metric": "f1",
+  "cv_mean_f1": 0.47009865843703824,
+  "rationale": "Our group selected the Logistic regression model for predicting customer\nchurn based on its performance during stratified 5-fold\ncross-validation.\n\nThe selected model achieved a mean cross-validation F1 score of\n0.4701. We used F1 as our primary evaluation\nmetric because it balances precision and recall, helping us identify\ncustomers at risk of leaving while limiting incorrect predictions.\n\nWe also considered the variation in F1 scores across validation folds,\nthe number of false negatives, and performance differences between\nNew and Established customers.\n\nFalse negatives are particularly important because they represent\ncustomers who actually churned but were predicted to stay. These\ncustomers could be missed by retention campaigns.\n\nWe considered model complexity and interpretability when making our\ndecision. The model was selected using development data only,\nwithout inspecting the final test results.\n\nAlthough cross-validation provides evidence of generalization,\nperformance may differ on unseen customers, especially because\nthe dataset is synthetic.",
+  "random_seed": 42,
+  "scikit_learn_version": "1.8.0"
+}
